@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+#редирект всех запросов из адресной строки на index.php, за исключением /project/webroot/
+RewriteCond %{REQUEST_URI} !^/project/webroot/
+RewriteRule .+ index.php
